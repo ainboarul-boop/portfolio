@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --color-dark: #1c1c21;
+  --color-dark-surface: #29292c;
+  --color-grey: #797c86;
+  --color-grey-light: #afb0b6;
+  --color-light: #f2f2f2;
+}
+
+@theme inline {
+  --font-sans: var(--font-manrope);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #1c1c21;
+  color: white;
+}
