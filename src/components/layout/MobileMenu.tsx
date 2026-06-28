@@ -36,21 +36,21 @@ export function MobileMenu({ open, onClose, activePath }: MobileMenuProps) {
           />
 
           <motion.aside
-            className="fixed right-0 top-0 z-50 flex h-full w-[min(100%,320px)] flex-col bg-[#1c1c21] shadow-2xl lg:hidden"
+            className="fixed right-0 top-0 z-50 flex h-full w-[min(100%,340px)] flex-col bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a] shadow-2xl lg:hidden"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 260 }}
             aria-label="Mobile navigation"
           >
-            <div className="flex items-center justify-between border-b border-[#2f2f37] px-6 py-5">
-              <span className="font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-widest text-[#797c86]">
+            <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
+              <span className="font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-widest text-gray-400">
                 Menu
               </span>
               <button
                 type="button"
                 onClick={onClose}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2f2f37] text-white transition-colors hover:bg-[#29292c]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 text-white transition-all hover:bg-white/10"
                 aria-label="Close menu"
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
@@ -64,7 +64,7 @@ export function MobileMenu({ open, onClose, activePath }: MobileMenuProps) {
               </button>
             </div>
 
-            <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6">
+            <nav className="flex flex-1 flex-col gap-2 overflow-y-auto px-4 py-6">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.href}
@@ -75,15 +75,15 @@ export function MobileMenu({ open, onClose, activePath }: MobileMenuProps) {
                   <Link
                     href={link.href}
                     onClick={onClose}
-                    className={`flex items-center justify-between rounded-xl px-4 py-4 font-[family-name:var(--font-alan)] text-xl tracking-wide transition-colors ${
+                    className={`flex items-center justify-between rounded-lg px-4 py-3 font-[family-name:var(--font-alan)] text-lg font-medium tracking-wide transition-all ${
                       activePath === link.href
-                        ? "bg-[#29292c] text-white"
-                        : "text-[#afb0b6] hover:bg-[#29292c]/60 hover:text-white"
-                    } ${"cta" in link && link.cta ? "mt-4 border border-white/20" : ""}`}
+                        ? "bg-gradient-to-r from-[#6366f1]/30 to-[#6366f1]/10 text-white"
+                        : "text-gray-300 hover:bg-white/5 hover:text-white"
+                    } ${"cta" in link && link.cta ? "mt-4 border border-[#6366f1]/50" : ""}`}
                   >
                     {link.label}
                     {"cta" in link && link.cta && (
-                      <ArrowIcon className="h-4 w-4 text-white" />
+                      <ArrowIcon className="h-4 w-4 text-[#6366f1]" />
                     )}
                   </Link>
                 </motion.div>

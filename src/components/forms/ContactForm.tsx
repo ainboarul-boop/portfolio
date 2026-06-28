@@ -45,13 +45,13 @@ export function ContactForm() {
     <FadeIn>
       <form
         onSubmit={handleSubmit}
-        className="mx-auto mt-12 max-w-2xl space-y-6 rounded-2xl border border-[#1c1c21]/10 bg-white p-6 shadow-sm md:p-10"
+        className="mx-auto mt-12 max-w-4xl space-y-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-xl sm:p-10 md:p-12 lg:p-16"
       >
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
           <div>
             <label
               htmlFor="name"
-              className="mb-2 block font-[family-name:var(--font-manrope)] text-sm font-medium text-[#29292c]"
+              className="mb-3 block font-[family-name:var(--font-manrope)] text-sm font-semibold text-gray-200"
             >
               Full Name
             </label>
@@ -59,14 +59,14 @@ export function ContactForm() {
               id="name"
               name="name"
               required
-              className="w-full rounded-[10px] border border-[#1c1c21] px-4 py-3 font-[family-name:var(--font-manrope)] text-base outline-none transition-colors focus:border-[#29292c]"
+              className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 font-[family-name:var(--font-manrope)] text-base text-white placeholder-gray-500 outline-none transition-all focus:border-[#6366f1]/50 focus:bg-white/10 focus:ring-1 focus:ring-[#6366f1]/30"
               placeholder="Your name"
             />
           </div>
           <div>
             <label
               htmlFor="email"
-              className="mb-2 block font-[family-name:var(--font-manrope)] text-sm font-medium text-[#29292c]"
+              className="mb-3 block font-[family-name:var(--font-manrope)] text-sm font-semibold text-gray-200"
             >
               Email
             </label>
@@ -75,7 +75,7 @@ export function ContactForm() {
               name="email"
               type="email"
               required
-              className="w-full rounded-[10px] border border-[#1c1c21] px-4 py-3 font-[family-name:var(--font-manrope)] text-base outline-none transition-colors focus:border-[#29292c]"
+              className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 font-[family-name:var(--font-manrope)] text-base text-white placeholder-gray-500 outline-none transition-all focus:border-[#6366f1]/50 focus:bg-white/10 focus:ring-1 focus:ring-[#6366f1]/30"
               placeholder="you@email.com"
             />
           </div>
@@ -84,7 +84,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="phone"
-            className="mb-2 block font-[family-name:var(--font-manrope)] text-sm font-medium text-[#29292c]"
+            className="mb-3 block font-[family-name:var(--font-manrope)] text-sm font-semibold text-gray-200"
           >
             Phone Number
           </label>
@@ -92,68 +92,68 @@ export function ContactForm() {
             id="phone"
             name="phone"
             type="tel"
-            className="w-full rounded-[10px] border border-[#1c1c21] px-4 py-3 font-[family-name:var(--font-manrope)] text-base outline-none transition-colors focus:border-[#29292c]"
+            className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 font-[family-name:var(--font-manrope)] text-base text-white placeholder-gray-500 outline-none transition-all focus:border-[#6366f1]/50 focus:bg-white/10 focus:ring-1 focus:ring-[#6366f1]/30"
             placeholder="+91"
           />
         </div>
 
-        <div>
-          <label
-            htmlFor="service"
-            className="mb-2 block font-[family-name:var(--font-manrope)] text-sm font-medium text-[#29292c]"
-          >
-            Service Interested In
-          </label>
-          <select
-            id="service"
-            name="service"
-            required
-            className="w-full rounded-[10px] border border-[#1c1c21] px-4 py-3 font-[family-name:var(--font-manrope)] text-base outline-none transition-colors focus:border-[#29292c]"
-          >
-            <option value="">Select a service</option>
-            <option value="Wedding Photography">Wedding Photography</option>
-            <option value="Event Photography">Event Photography</option>
-            <option value="Portrait Photography">Portrait Photography</option>
-            <option value="Newborn Photography">Newborn Photography</option>
-            <option value="Maternity Photoshoot">Maternity Photoshoot</option>
-            <option value="Fashion Photography">Fashion Photography</option>
-            <option value="Product Photography">Product Photography</option>
-            <option value="Photoshoot Collaboration">Photoshoot Collaboration</option>
-            <option value="Photo Frames">Photo Frames</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+          <div>
+            <label
+              htmlFor="service"
+              className="mb-3 block font-[family-name:var(--font-manrope)] text-sm font-semibold text-gray-200"
+            >
+              Service Interested In
+            </label>
+            <select
+              id="service"
+              name="service"
+              required
+              className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 font-[family-name:var(--font-manrope)] text-base text-white outline-none transition-all focus:border-[#6366f1]/50 focus:bg-white/10 focus:ring-1 focus:ring-[#6366f1]/30"
+            >
+              <option value="" className="bg-[#1a1a2e] text-white">Select a service</option>
+              <option value="Wedding Photography" className="bg-[#1a1a2e] text-white">Wedding Photography</option>
+              <option value="Event Photography" className="bg-[#1a1a2e] text-white">Event Photography</option>
+              <option value="Portrait Photography" className="bg-[#1a1a2e] text-white">Portrait Photography</option>
+              <option value="Newborn Photography" className="bg-[#1a1a2e] text-white">Newborn Photography</option>
+              <option value="Maternity Photoshoot" className="bg-[#1a1a2e] text-white">Maternity Photoshoot</option>
+              <option value="Fashion Photography" className="bg-[#1a1a2e] text-white">Fashion Photography</option>
+              <option value="Product Photography" className="bg-[#1a1a2e] text-white">Product Photography</option>
+              <option value="Photoshoot Collaboration" className="bg-[#1a1a2e] text-white">Photoshoot Collaboration</option>
+              <option value="Photo Frames" className="bg-[#1a1a2e] text-white">Photo Frames</option>
+              <option value="Other" className="bg-[#1a1a2e] text-white">Other</option>
+            </select>
+          </div>
 
-        <div>
-          <label
-            htmlFor="message"
-            className="mb-2 block font-[family-name:var(--font-manrope)] text-sm font-medium text-[#29292c]"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            rows={5}
-            className="w-full resize-none rounded-[10px] border border-[#1c1c21] px-4 py-3 font-[family-name:var(--font-manrope)] text-base outline-none transition-colors focus:border-[#29292c]"
-            placeholder="Tell us about your project, event date, or vision..."
-          />
+          <div>
+            <label
+              htmlFor="message"
+              className="mb-3 block font-[family-name:var(--font-manrope)] text-sm font-semibold text-gray-200"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows={5}
+              className="w-full resize-none rounded-xl border border-white/20 bg-white/5 px-4 py-3 font-[family-name:var(--font-manrope)] text-base text-white placeholder-gray-500 outline-none transition-all focus:border-[#6366f1]/50 focus:bg-white/10 focus:ring-1 focus:ring-[#6366f1]/30"
+              placeholder="Tell us about your project, event date, or vision..."
+            />
+          </div>
         </div>
 
         <button
           type="submit"
           disabled={state === "loading"}
-          className="w-full rounded-[10px] border border-[#2f2f37] bg-[#1c1c21] px-8 py-4 font-[family-name:var(--font-manrope)] text-lg font-medium text-white transition-colors hover:bg-[#29292c] disabled:opacity-60"
+          className="w-full rounded-xl border-2 border-transparent bg-gradient-to-r from-[#6366f1] to-[#818cf8] px-8 py-4 font-[family-name:var(--font-manrope)] text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:from-[#818cf8] hover:to-[#6366f1] disabled:scale-100 disabled:opacity-50"
         >
           {state === "loading" ? "Sending..." : "Send Message"}
         </button>
 
         {message && (
           <p
-            className={`text-center font-[family-name:var(--font-manrope)] text-sm ${
-              state === "success" ? "text-green-700" : "text-red-600"
-            }`}
+            className={`rounded-lg px-4 py-3 text-center font-[family-name:var(--font-manrope)] text-sm font-medium ${state === "success" ? "bg-[#10b981]/20 text-[#10b981]" : "bg-[#ef4444]/20 text-[#ff6b6b]"}`}
             role="status"
           >
             {message}

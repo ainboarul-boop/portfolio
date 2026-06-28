@@ -53,25 +53,25 @@ type NavLink = {
 
 function NavItem({ href, label, active, cta, variant = "dark" }: NavLink) {
   const textColor =
-    variant === "light" ? "text-[#29292c]/65" : "text-white";
+    variant === "light" ? "text-[#29292c]" : "text-white";
   const chevronColor =
-    variant === "light" ? "text-[#29292c]/65" : "text-white";
+    variant === "light" ? "text-[#29292c]" : "text-white";
 
   if (cta) {
     return (
       <Link
         href={href}
-        className={`group relative inline-flex items-center gap-3 rounded-[14px] border-2 px-6 py-2 font-[family-name:var(--font-alan)] text-lg tracking-wide transition-colors md:text-[30px] ${
+        className={`group relative inline-flex items-center gap-3 rounded-xl border-2 px-7 py-3 font-[family-name:var(--font-alan)] text-base font-semibold tracking-wide transition-all hover:scale-105 md:text-xl ${
           active
             ? variant === "light"
-              ? "border-[#29292c]/65 bg-[rgba(85,81,81,0.2)]"
-              : "border-white bg-white/10"
+              ? "border-[#29292c]/40 bg-[#29292c]/10 shadow-lg"
+              : "border-white/40 bg-gradient-to-r from-white/20 to-white/10 shadow-lg"
             : variant === "light"
-              ? "border-[#29292c]/65 hover:bg-black/5"
-              : "border-white hover:bg-white/10"
+              ? "border-[#29292c]/30 hover:bg-[#29292c]/5"
+              : "border-white/30 hover:bg-white/15"
         } ${textColor}`}
       >
-        <ArrowIcon className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+        <ArrowIcon className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
         {label}
       </Link>
     );
@@ -80,12 +80,12 @@ function NavItem({ href, label, active, cta, variant = "dark" }: NavLink) {
   return (
     <Link
       href={href}
-      className={`group relative inline-flex items-center gap-2 font-[family-name:var(--font-alan)] text-lg tracking-wide transition-opacity hover:opacity-80 md:text-[30px] ${textColor}`}
+      className={`group relative inline-flex items-center gap-2 font-[family-name:var(--font-alan)] text-base font-medium tracking-wide transition-opacity hover:opacity-70 md:text-lg ${textColor}`}
     >
       {active && (
         <span
-          className={`absolute -inset-x-4 -inset-y-2 -z-10 rounded-full ${
-            variant === "light" ? "bg-[rgba(85,81,81,0.2)]" : "bg-white/20"
+          className={`absolute -inset-x-3 -inset-y-1.5 -z-10 rounded-lg ${
+            variant === "light" ? "bg-[#29292c]/8" : "bg-white/15"
           }`}
         />
       )}
@@ -106,7 +106,7 @@ export function Header({ activePath, variant = "dark", onMenuOpen }: HeaderProps
 
   return (
     <header className="relative z-40 w-full">
-      <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-4 py-4 md:px-8 md:py-6 lg:px-12">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-4 py-4 md:px-8 md:py-5 lg:px-16">
         <Link
           href="/"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black"
@@ -115,7 +115,7 @@ export function Header({ activePath, variant = "dark", onMenuOpen }: HeaderProps
         </Link>
 
         <nav
-          className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-10"
+          className="hidden flex-1 items-center justify-center gap-8 lg:flex xl:gap-12"
           aria-label="Main navigation"
         >
           {[
@@ -146,16 +146,16 @@ export function Header({ activePath, variant = "dark", onMenuOpen }: HeaderProps
         <button
           type="button"
           onClick={onMenuOpen}
-          className={`ml-auto flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-lg border lg:hidden ${
+          className={`ml-auto flex h-12 w-12 flex-col items-center justify-center gap-1.5 rounded-xl border transition-colors lg:hidden ${
             isLight
-              ? "border-[#29292c]/20 text-[#29292c]"
-              : "border-white/30 text-white"
+              ? "border-[#29292c]/20 text-[#29292c] hover:bg-black/5"
+              : "border-white/20 text-white hover:bg-white/10"
           }`}
           aria-label="Open menu"
         >
-          <span className="block h-0.5 w-5 bg-current" />
-          <span className="block h-0.5 w-5 bg-current" />
-          <span className="block h-0.5 w-5 bg-current" />
+          <span className="block h-0.5 w-6 bg-current" />
+          <span className="block h-0.5 w-6 bg-current" />
+          <span className="block h-0.5 w-6 bg-current" />
         </button>
       </div>
     </header>

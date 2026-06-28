@@ -109,13 +109,13 @@ export default function AboutPage() {
               ready to bring your vision to life.
             </p>
           </FadeIn>
-          <FadeIn delay={0.1} className="relative mx-auto mt-12 max-w-[868px]">
+          <FadeIn delay={0.15} className="relative mx-auto max-w-[1592px]">
             <Image
-              src={images.aboutWatermark}
-              alt="AINBOW CREATIVE STUDIO logo watermark"
-              width={868}
-              height={562}
-              className="mx-auto h-auto w-full opacity-20"
+              src={images.bookWatermark}
+              alt="AINBOW CREATIVE STUDIO watermark"
+              width={1592}
+              height={1030}
+              className="mx-auto h-auto w-full opacity-100"
             />
           </FadeIn>
         </section>

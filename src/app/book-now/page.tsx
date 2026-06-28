@@ -18,30 +18,31 @@ export default function BookNowPage() {
   return (
     <SiteShell headerVariant="light" headerOverlay>
       <main>
-        <section className="relative min-h-[600px] overflow-hidden md:min-h-[1075px]">
+        <section className="relative min-h-screen overflow-hidden md:min-h-screen">
           <Image
             src={images.bookHeroOverlay}
             alt=""
             fill
-            className="object-cover opacity-40"
+            className="object-cover"
             aria-hidden
             sizes="100vw"
           />
-          <div className="relative z-10 flex min-h-[600px] flex-col items-center justify-center px-4 pb-16 pt-24 md:min-h-[1075px]">
+          <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/20 to-white/40" />
+          <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pb-16 pt-20 md:pb-24">
             <FadeIn className="w-full max-w-[957px]">
-              <div className="mx-auto rounded-[60px] bg-black/15 px-6 py-8 md:rounded-[105px] md:px-12">
+              <div className="mx-auto rounded-3xl border border-white/30 bg-white/15 backdrop-blur-xl px-6 py-8 shadow-2xl md:rounded-4xl md:px-12 md:py-12">
                 <Image
                   src={images.logoLight}
                   alt="AINBOW CREATIVE STUDIO logo"
                   width={900}
                   height={582}
-                  className="mx-auto h-auto w-full max-w-[700px] object-contain"
+                  className="mx-auto h-auto w-full max-w-[600px] md:max-w-[700px] object-contain"
                   priority
                 />
               </div>
             </FadeIn>
-            <FadeIn delay={0.1} className="mt-8 text-center">
-              <p className="font-[family-name:var(--font-raleway)] text-2xl font-extralight uppercase text-[#29292c] md:text-[67px]">
+            <FadeIn delay={0.1} className="mt-8 text-center md:mt-12">
+              <p className="font-[family-name:var(--font-raleway)] text-xl font-light uppercase tracking-[0.15em] text-[#29292c] md:text-5xl lg:text-6xl drop-shadow-lg">
                 {siteConfig.tagline}
               </p>
             </FadeIn>
@@ -50,17 +51,15 @@ export default function BookNowPage() {
 
         <NameBanner />
 
-        <section className="bg-white px-4 py-16 md:px-10 md:py-24 lg:px-[38px]">
+        <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 px-4 py-16 md:px-10 md:py-24 lg:px-[38px]">
           <div className="mx-auto max-w-[1524px]">
             <FadeIn>
-              <p className="font-[family-name:var(--font-manrope)] text-xl font-semibold uppercase text-[#29292c] md:text-[30px]">
-                Contact Me
-              </p>
-              <h1 className="mt-1 font-[family-name:var(--font-manrope)] text-4xl font-semibold uppercase text-[#29292c] md:text-[65px]">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#6366f1] mb-2">Contact</span>
+              <h1 className="font-[family-name:var(--font-manrope)] text-4xl font-bold text-[#0f0f1a] md:text-5xl lg:text-6xl leading-tight">
                 Get in Touch with Me
               </h1>
-              <p className="mt-6 font-[family-name:var(--font-manrope)] text-lg leading-relaxed text-[#797c86] md:text-[35px]">
-                Step into a world of timeless photography with Damien Braun.
+              <p className="mt-6 font-[family-name:var(--font-manrope)] text-base leading-relaxed text-gray-700 md:text-lg">
+                Step into a world of timeless photography with {siteConfig.photographer}.
                 Explore our range of photography services, each crafted to tell
                 your unique story through captivating images. Whether it&apos;s
                 the magic of portraits, the emotion of events, or the allure of
@@ -70,10 +69,10 @@ export default function BookNowPage() {
             </FadeIn>
 
             <FadeIn delay={0.1} className="mt-12 md:mt-16">
-              <h2 className="font-[family-name:var(--font-manrope)] text-3xl font-semibold uppercase text-[#29292c] md:text-[65px]">
+              <h2 className="font-[family-name:var(--font-manrope)] text-2xl font-bold text-[#0f0f1a] md:text-4xl lg:text-5xl">
                 Contact Information
               </h2>
-              <p className="mt-4 font-[family-name:var(--font-manrope)] text-lg text-[#797c86] md:text-[35px]">
+              <p className="mt-4 font-[family-name:var(--font-manrope)] text-base text-gray-700 md:text-lg">
                 Feel free to reach out to us through various channels. We are
                 available by phone, email, and social media for your convenience.
               </p>

@@ -15,26 +15,29 @@ function AbstractAccent({ className = "" }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="bg-[#29292c] text-white">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a] text-white">
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-gradient-to-b from-[#6366f1]/20 to-transparent blur-3xl" />
+      </div>
       <FadeIn>
-        <div className="mx-auto max-w-[1600px] border-l border-[#1c1c21] px-6 py-12 md:px-16 md:py-20 lg:px-20">
+        <div className="relative mx-auto max-w-[1600px] border-l border-white/10 px-6 py-16 md:px-16 md:py-24 lg:px-20">
           <div className="flex items-start justify-between gap-8">
             <AbstractAccent className="-rotate-90" />
             <div className="flex-1 text-center">
-              <p className="font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-wide text-[#797c86] md:text-[25px]">
-                A more meaningful home for photography
+              <p className="font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-wider text-gray-400 md:text-lg">
+                Ready to Capture Your Perfect Moments?
               </p>
               <div className="mt-8 md:mt-12">
-                <p className="font-[family-name:var(--font-manrope)] text-3xl font-semibold uppercase md:text-[48px]">
+                <p className="bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text font-[family-name:var(--font-antonio)] text-4xl font-bold uppercase text-transparent md:text-6xl">
                   Let&apos;s
                 </p>
-                <p className="font-[family-name:var(--font-manrope)] text-3xl font-semibold uppercase md:text-[48px]">
+                <p className="bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text font-[family-name:var(--font-antonio)] text-4xl font-bold uppercase text-transparent md:text-6xl">
                   Work Together
                 </p>
               </div>
               <Link
                 href="/book-now"
-                className="mt-8 inline-block rounded-[10px] border border-[#2f2f37] bg-[#1c1c21] px-8 py-3 font-[family-name:var(--font-manrope)] text-base font-medium text-white transition-colors hover:bg-[#2f2f37] md:mt-10"
+                className="mt-10 inline-block rounded-xl border-2 border-white/30 bg-gradient-to-r from-white/20 to-white/10 px-10 py-4 font-[family-name:var(--font-manrope)] text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:border-white/50 hover:from-white/30 hover:to-white/20 hover:shadow-xl md:mt-12 md:text-lg"
               >
                 Get in Touch
               </Link>
@@ -44,17 +47,17 @@ export function Footer() {
         </div>
       </FadeIn>
 
-      <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-between gap-4 border-t border-[#1c1c21] px-6 py-8 md:flex-row md:px-16 lg:px-20">
-        <div className="flex flex-wrap items-center justify-center gap-2 font-[family-name:var(--font-manrope)] text-sm text-[#797c86] md:text-[25px]">
+      <div className="relative mx-auto flex max-w-[1600px] flex-col items-center justify-between gap-4 border-t border-white/10 px-6 py-8 md:flex-row md:px-16 lg:px-20">
+        <div className="flex flex-wrap items-center justify-center gap-3 font-[family-name:var(--font-manrope)] text-xs text-gray-400 md:text-sm">
           <Link href="/terms" className="transition-colors hover:text-white">
             Terms &amp; Conditions
           </Link>
-          <span className="text-[#2f2f37]">|</span>
+          <span className="text-gray-600">|</span>
           <Link href="/privacy" className="transition-colors hover:text-white">
             Privacy Policy
           </Link>
         </div>
-        <p className="text-center font-[family-name:var(--font-manrope)] text-sm text-[#797c86] md:text-[25px]">
+        <p className="text-center font-[family-name:var(--font-manrope)] text-xs text-gray-400 md:text-sm">
           © {siteConfig.name}. All rights reserved.
         </p>
       </div>
@@ -64,12 +67,16 @@ export function Footer() {
 
 export function NameBanner() {
   return (
-    <section className="bg-[#f2f2f2] px-4 py-16 md:py-24">
-      <div className="mx-auto max-w-[1600px] text-center">
-        <p className="font-[family-name:var(--font-arimo)] text-lg font-bold uppercase text-black md:text-[40px]">
-          PROFESSIONAL PHOTOGRAPHY BY
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#f5f5f8] via-white to-[#e0e0f0] px-4 py-16 md:py-32">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-gradient-to-r from-[#6366f1] to-transparent blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-gradient-to-l from-[#6366f1] to-transparent blur-3xl" />
+      </div>
+      <div className="relative mx-auto max-w-[1600px] text-center">
+        <p className="font-[family-name:var(--font-arimo)] text-sm font-bold uppercase tracking-widest text-gray-600 md:text-lg">
+          Professional Photography By
         </p>
-        <h2 className="mt-2 font-[family-name:var(--font-antonio)] text-6xl font-semibold uppercase leading-none tracking-[-0.02em] text-black md:text-[120px] lg:text-[174px]">
+        <h2 className="mt-4 bg-gradient-to-r from-[#0f0f1a] via-[#1a1a2e] to-[#0f0f1a] bg-clip-text font-[family-name:var(--font-antonio)] text-6xl font-bold uppercase leading-none tracking-tighter text-transparent md:text-[120px] lg:text-[170px]">
           ARULKUMAR
         </h2>
       </div>
