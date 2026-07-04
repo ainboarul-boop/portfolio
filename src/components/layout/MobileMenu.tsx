@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect } from "react";
 import { navLinks } from "@/lib/site";
-import { ArrowIcon } from "./Header";
+import { ArrowIcon, ChevronDown } from "./Header";
 
 type MobileMenuProps = {
   open: boolean;
@@ -82,9 +82,14 @@ export function MobileMenu({ open, onClose, activePath }: MobileMenuProps) {
                     } ${"cta" in link && link.cta ? "mt-4 border border-[#6366f1]/50" : ""}`}
                   >
                     {link.label}
-                    {"cta" in link && link.cta && (
-                      <ArrowIcon className="h-4 w-4 text-[#6366f1]" />
-                    )}
+                    <span className="flex items-center gap-2">
+                      {"hasSubmenu" in link && link.hasSubmenu && (
+                        <ChevronDown className="h-2 w-3 text-current/70" />
+                      )}
+                      {"cta" in link && link.cta && (
+                        <ArrowIcon className="h-4 w-4 text-[#6366f1]" />
+                      )}
+                    </span>
                   </Link>
                 </motion.div>
               ))}

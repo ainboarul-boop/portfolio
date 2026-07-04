@@ -2,64 +2,56 @@ import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { siteConfig } from "@/lib/site";
 
-function AbstractAccent({ className = "" }: { className?: string }) {
-  return (
-    <div
-      className={`pointer-events-none hidden h-[120px] w-[120px] shrink-0 opacity-40 md:block lg:h-[187px] lg:w-[187px] ${className}`}
-      aria-hidden
-    >
-      <div className="h-full w-full rounded-full border border-[#2f2f37]/40 bg-[radial-gradient(circle_at_30%_30%,#2f2f37,transparent_70%)]" />
-    </div>
-  );
-}
-
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a] text-white">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-gradient-to-b from-[#6366f1]/20 to-transparent blur-3xl" />
-      </div>
-      <FadeIn>
-        <div className="relative mx-auto max-w-[1600px] border-l border-white/10 px-6 py-16 md:px-16 md:py-24 lg:px-20">
-          <div className="flex items-start justify-between gap-8">
-            <AbstractAccent className="-rotate-90" />
-            <div className="flex-1 text-center">
-              <p className="font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-wider text-gray-400 md:text-lg">
-                Ready to Capture Your Perfect Moments?
+    <footer className="relative overflow-hidden bg-[#0d1016] text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(215,181,109,0.16),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(76,90,118,0.22),transparent_34%)]" />
+      <div className="relative mx-auto max-w-[1600px] px-4 py-14 md:px-8 md:py-18 lg:px-16 lg:py-20">
+        <FadeIn>
+          <div className="grid gap-10 rounded-[34px] border border-white/10 bg-white/6 p-8 shadow-[0_24px_70px_rgba(0,0,0,0.24)] backdrop-blur-sm md:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+            <div>
+              <p className="font-[family-name:var(--font-manrope)] text-[11px] font-semibold uppercase tracking-[0.34em] text-white/58">
+                Ready to create something memorable?
               </p>
-              <div className="mt-8 md:mt-12">
-                <p className="bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text font-[family-name:var(--font-antonio)] text-4xl font-bold uppercase text-transparent md:text-6xl">
-                  Let&apos;s
-                </p>
-                <p className="bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text font-[family-name:var(--font-antonio)] text-4xl font-bold uppercase text-transparent md:text-6xl">
-                  Work Together
-                </p>
-              </div>
+              <h2 className="mt-4 font-[family-name:var(--font-antonio)] text-[clamp(2.4rem,6vw,5rem)] uppercase leading-[0.94] tracking-[0.06em]">
+                Book Arul Kumar for weddings, events, portraits, and every story in between.
+              </h2>
+              <p className="mt-5 max-w-2xl font-[family-name:var(--font-manrope)] text-base leading-8 text-white/70 md:text-lg">
+                Professional photography with thoughtful direction, polished image
+                delivery, and a client experience that feels easy from first message to final gallery.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4">
               <Link
                 href="/book-now"
-                className="mt-10 inline-block rounded-xl border-2 border-white/30 bg-gradient-to-r from-white/20 to-white/10 px-10 py-4 font-[family-name:var(--font-manrope)] text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:border-white/50 hover:from-white/30 hover:to-white/20 hover:shadow-xl md:mt-12 md:text-lg"
+                className="inline-flex items-center justify-center rounded-full bg-[#d7b56d] px-7 py-4 font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-[0.28em] text-[#11131a] transition-all duration-300 hover:-translate-y-1"
               >
-                Get in Touch
+                Get in touch
               </Link>
+              <a
+                href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+                className="inline-flex items-center justify-center rounded-full border border-white/18 bg-white/8 px-7 py-4 font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-[0.28em] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/12"
+              >
+                Call {siteConfig.phone}
+              </a>
             </div>
-            <AbstractAccent className="rotate-90 scale-y-[-1]" />
           </div>
-        </div>
-      </FadeIn>
+        </FadeIn>
 
-      <div className="relative mx-auto flex max-w-[1600px] flex-col items-center justify-between gap-4 border-t border-white/10 px-6 py-8 md:flex-row md:px-16 lg:px-20">
-        <div className="flex flex-wrap items-center justify-center gap-3 font-[family-name:var(--font-manrope)] text-xs text-gray-400 md:text-sm">
-          <Link href="/terms" className="transition-colors hover:text-white">
-            Terms &amp; Conditions
-          </Link>
-          <span className="text-gray-600">|</span>
-          <Link href="/privacy" className="transition-colors hover:text-white">
-            Privacy Policy
-          </Link>
+        <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap items-center gap-4 font-[family-name:var(--font-manrope)] text-xs text-white/54 md:text-sm">
+            <Link href="/terms" className="transition-colors hover:text-white">
+              Terms &amp; Conditions
+            </Link>
+            <Link href="/privacy" className="transition-colors hover:text-white">
+              Privacy Policy
+            </Link>
+          </div>
+          <p className="font-[family-name:var(--font-manrope)] text-xs text-white/54 md:text-sm">
+            Copyright {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          </p>
         </div>
-        <p className="text-center font-[family-name:var(--font-manrope)] text-xs text-gray-400 md:text-sm">
-          © {siteConfig.name}. All rights reserved.
-        </p>
       </div>
     </footer>
   );
@@ -67,17 +59,14 @@ export function Footer() {
 
 export function NameBanner() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#f5f5f8] via-white to-[#e0e0f0] px-4 py-16 md:py-32">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-gradient-to-r from-[#6366f1] to-transparent blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-gradient-to-l from-[#6366f1] to-transparent blur-3xl" />
-      </div>
+    <section className="relative overflow-hidden bg-[#f5efe5] px-4 py-12 md:px-8 md:py-16 lg:px-16">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(215,181,109,0.14),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(76,90,118,0.14),transparent_36%)]" />
       <div className="relative mx-auto max-w-[1600px] text-center">
-        <p className="font-[family-name:var(--font-arimo)] text-sm font-bold uppercase tracking-widest text-gray-600 md:text-lg">
+        <p className="font-[family-name:var(--font-arimo)] text-sm font-bold uppercase tracking-[0.32em] text-[#746d62] md:text-base">
           Professional Photography By
         </p>
-        <h2 className="mt-4 bg-gradient-to-r from-[#0f0f1a] via-[#1a1a2e] to-[#0f0f1a] bg-clip-text font-[family-name:var(--font-antonio)] text-6xl font-bold uppercase leading-none tracking-tighter text-transparent md:text-[120px] lg:text-[170px]">
-          ARULKUMAR
+        <h2 className="mt-4 font-[family-name:var(--font-antonio)] text-[clamp(3rem,10vw,8.5rem)] uppercase leading-none tracking-[0.06em] text-[#11131a]">
+          ARUL KUMAR
         </h2>
       </div>
     </section>

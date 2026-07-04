@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Footer, NameBanner } from "@/components/layout/Footer";
+import { Footer } from "@/components/layout/Footer";
 import { SiteShell } from "@/components/layout/SiteShell";
 import {
   GallerySection,
   HomeHero,
   IntroductionSection,
-  LogoBreakSection,
   NewbornSection,
   ServicesPreviewSection,
 } from "@/components/home/HomeSections";
@@ -22,10 +21,8 @@ export default function HomePage() {
     <SiteShell headerOverlay>
       <HomeHero />
       <main>
-        <NameBanner />
         <IntroductionSection />
         <ServicesPreviewSection />
-        <LogoBreakSection />
         <GallerySection />
         <NewbornSection />
         <Footer />

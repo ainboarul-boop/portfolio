@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "AINBOW CREATIVE STUDIO",
-  photographer: "ARULKUMAR",
+  photographer: "ARUL KUMAR",
   tagline: "YOU LIVE IT WE CAPTURE IT",
   subtitle: "PROFESSIONAL PHOTOGRAPHY BY",
   url: "https://ainbowcreativestudio.com",
@@ -11,10 +11,10 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { href: "/", label: "HOME" },
-  { href: "/about", label: "ABOUT ME" },
-  { href: "/portfolio", label: "PORTFOLIO" },
-  { href: "/services", label: "SERVICES" },
+  { href: "/", label: "HOME", hasSubmenu: false },
+  { href: "/about", label: "ABOUT ME", hasSubmenu: false },
+  { href: "/portfolio", label: "PORTFOLIO", hasSubmenu: false },
+  { href: "/services", label: "SERVICES", hasSubmenu: false },
   { href: "/book-now", label: "BOOK NOW", cta: true },
 ] as const;
 
@@ -34,13 +34,13 @@ export const seoKeywords = [
   "pre-wedding photography",
   "candid photography",
   "AINBOW CREATIVE STUDIO",
-  "Arulkumar photographer",
+  "Arul Kumar photographer",
 ];
 
 export const defaultMetadata = {
-  title: "Arulkumar | Professional Photographer | AINBOW CREATIVE STUDIO",
+  title: "Arul Kumar | Professional Photographer | AINBOW CREATIVE STUDIO",
   description:
-    "Professional photography by Arulkumar — weddings, events, portraits, newborn, maternity, fashion, product shoots, collaborations & premium photo frames across Tamil Nadu. YOU LIVE IT, WE CAPTURE IT.",
+    "Professional photography by Arul Kumar — weddings, events, portraits, newborn, maternity, fashion, product shoots, collaborations & premium photo frames across Tamil Nadu. YOU LIVE IT, WE CAPTURE IT.",
   keywords: seoKeywords.join(", "),
 };
 
