@@ -228,7 +228,7 @@ export function PortfolioPageSections() {
         </div>
       </section>
 
-      <section className="bg-[#faf8f4] px-4 py-18 md:px-8 md:py-24 lg:px-12">
+      {/* <section className="bg-[#faf8f4] px-4 py-18 md:px-8 md:py-24 lg:px-12">
         <div className="mx-auto grid max-w-[1360px] gap-8 rounded-[30px] border border-[#ebe4d9] bg-white p-8 md:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <FadeIn>
             <SectionLabel>Portfolio direction</SectionLabel>
@@ -256,7 +256,7 @@ export function PortfolioPageSections() {
             </Link>
           </FadeIn>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

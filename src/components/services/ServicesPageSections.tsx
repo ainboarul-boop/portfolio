@@ -142,7 +142,9 @@ export function ServicesPageSections() {
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.08} direction="left" className="hidden lg:block" />
+          <FadeIn delay={0.08} direction="left" className="hidden lg:block">
+            <div className=""></div>
+          </FadeIn>
         </div>
       </section>
 
@@ -211,7 +213,7 @@ export function ServicesPageSections() {
                       alt={activeService.title}
                       width={1600}
                       height={1100}
-                      className="h-[420px] w-full object-cover md:h-[520px]"
+                      className="h-full w-full object-cover"
                     />
                   </div>
 
@@ -255,7 +257,7 @@ export function ServicesPageSections() {
         </div>
       </section>
 
-      <section className="bg-[#faf8f4] px-4 py-18 md:px-8 md:py-24 lg:px-12">
+      {/* <section className="bg-[#faf8f4] px-4 py-18 md:px-8 md:py-24 lg:px-12">
         <div className="mx-auto max-w-[1360px]">
           <FadeIn className="grid gap-8 rounded-[30px] border border-[#ebe4d9] bg-white p-8 md:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
             <div className="max-w-3xl">
@@ -285,7 +287,7 @@ export function ServicesPageSections() {
             </div>
           </FadeIn>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
