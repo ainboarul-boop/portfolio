@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <SiteShell headerOverlay>
+    <SiteShell headerVariant="light">
       <HomeHero />
       <main>
         <IntroductionSection />

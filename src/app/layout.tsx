@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Antonio, Arimo, Raleway, Alumni_Sans } from "next/font/google";
+import { Manrope, Antonio, Arimo, Raleway, Alumni_Sans, Cormorant_Garamond } from "next/font/google";
 import { JsonLd } from "@/components/seo/JsonLd";
 import "./globals.css";
 import { defaultMetadata, siteConfig } from "@/lib/site";
@@ -33,6 +33,13 @@ const raleway = Raleway({
 
 const alanSans = Alumni_Sans({
   variable: "--font-alan",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
@@ -80,7 +87,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${manrope.variable} ${antonio.variable} ${arimo.variable} ${raleway.variable} ${alanSans.variable} min-h-screen bg-white font-[family-name:var(--font-manrope)] text-[#29292c] antialiased`}
+        className={`${manrope.variable} ${antonio.variable} ${arimo.variable} ${raleway.variable} ${alanSans.variable} ${cormorant.variable} min-h-screen bg-white font-[family-name:var(--font-manrope)] text-[#29292c] antialiased`}
       >
         <JsonLd />
         {children}

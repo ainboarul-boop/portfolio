@@ -1,20 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary Colors */
-  --color-dark: #0f0f1a;
-  --color-dark-surface: #1a1a2e;
-  --color-dark-surface-light: #252540;
-  --color-grey: #8a8f99;
-  --color-grey-light: #b5bac1;
-  --color-light: #f5f5f8;
-  
-  /* Accent Colors */
-  --color-accent: #6366f1;
-  --color-accent-light: #818cf8;
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
+  --color-ink: #11131a;
+  --color-ink-soft: #1a1d26;
+  --color-cream: #f6f1e9;
+  --color-sand: #d8b16c;
+  --color-muted: #6c6f78;
+  --color-border: rgba(17, 19, 26, 0.12);
 }
 
 @theme inline {
@@ -31,17 +23,13 @@ html {
 
 body {
   overflow-x: hidden;
-  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-surface) 100%);
+  background: var(--color-cream);
+  color: var(--color-ink);
 }
 
 ::selection {
-  background: var(--color-accent);
-  color: white;
-}
-
-/* Smooth transitions */
-* {
-  @apply transition-all duration-300;
+  background: var(--color-sand);
+  color: var(--color-ink);
 }
 
 /* Modern button reset */
@@ -55,7 +43,7 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  @apply outline-2 outline-offset-2 outline-[var(--color-accent)];
+  @apply outline-2 outline-offset-2 outline-[var(--color-sand)];
 }
 
 /* Custom scrollbar */
@@ -64,14 +52,14 @@ select:focus-visible {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-dark);
+  background: #e9e1d5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-grey);
+  background: #b49b73;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-grey-light);
+  background: #90724a;
 }
