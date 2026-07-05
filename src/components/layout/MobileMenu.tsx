@@ -64,7 +64,7 @@ export function MobileMenu({ open, onClose, activePath }: MobileMenuProps) {
               </button>
             </div>
 
-            <nav className="flex flex-1 flex-col gap-2 overflow-y-auto px-4 py-6">
+            <nav className="flex flex-1 flex-col gap-2 overflow-y-auto px-5 py-3">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.href}
@@ -75,11 +75,11 @@ export function MobileMenu({ open, onClose, activePath }: MobileMenuProps) {
                   <Link
                     href={link.href}
                     onClick={onClose}
-                    className={`flex items-center justify-between rounded-lg px-4 py-3 font-[family-name:var(--font-alan)] text-lg font-medium tracking-wide transition-all ${
+                    className={`flex items-center justify-between rounded-lg px-3 py-3 font-[family-name:var(--font-alan)] text-lg font-medium tracking-wide transition-all ${
                       activePath === link.href
                         ? "bg-gradient-to-r from-[#6366f1]/30 to-[#6366f1]/10 text-white"
                         : "text-gray-300 hover:bg-white/5 hover:text-white"
-                    } ${"cta" in link && link.cta ? "mt-4 border border-[#6366f1]/50" : ""}`}
+                    } ${"cta" in link && link.cta ? "border border-[#6366f1]/50" : ""}`}
                   >
                     {link.label}
                     <span className="flex items-center gap-2">

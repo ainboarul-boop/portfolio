@@ -158,7 +158,7 @@ export function Header({
         >
           <span
             className={`relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-current/10 ${
-              transparentLightOverlay ? "bg-white/10" : "bg-white"
+              transparentLightOverlay ? "bg-white/10" : "bg-balck"
             }`}
           >
             <Image
@@ -215,7 +215,7 @@ export function Header({
             transparentLightOverlay
               ? "border-white/20 text-white hover:bg-white/10"
               : isLight
-              ? "border-[#d8d2c8] text-[#29292c] hover:bg-black/5"
+              ? "border-black text-[#29292c] hover:bg-black/5"
               : "border-white/20 text-white hover:bg-white/10"
           }`}
           aria-label="Open menu"
