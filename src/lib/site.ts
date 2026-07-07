@@ -6,7 +6,7 @@ export const siteConfig = {
   url: "https://ainbowcreativestudio.com",
   email: "ainboarul@gmail.com",
   phone: "+91 7904286978",
-  whatsapp: "+91 9894954872",
+  whatsapp: "+91 7904286978",
   location: "Tamil Nadu, India",
 };
 
