@@ -27,12 +27,39 @@ const collections: Collection[] = [
     hero: images.portfolioHero,
     feature: images.portfolioFeature,
     gallery: [
-      images.heroBg,
-      images.introBride,
-      images.galleryHands,
-      images.portfolioGallery[1],
-      images.portfolioGallery[5],
-      images.portfolioGallery[11],
+      images.weddingGallery[0],
+      images.weddingGallery[1],
+      images.weddingGallery[2],
+      images.weddingGallery[3],
+      images.weddingGallery[4],
+      images.weddingGallery[5],
+      images.weddingGallery[6],
+      images.weddingGallery[7],
+      images.weddingGallery[8],
+      images.weddingGallery[9],
+      images.weddingGallery[10],
+      images.weddingGallery[11],
+      images.weddingGallery[12],
+      images.weddingGallery[13],
+      images.weddingGallery[14],
+      images.weddingGallery[16],
+      images.weddingGallery[17],
+      images.weddingGallery[18],
+      images.weddingGallery[19],
+      images.weddingGallery[20],
+      images.weddingGallery[21],
+      images.weddingGallery[22],
+      images.weddingGallery[23],
+      images.weddingGallery[24],
+      images.weddingGallery[25],
+      images.weddingGallery[26],
+      images.weddingGallery[27],
+      images.weddingGallery[28],
+      images.weddingGallery[29],
+      images.weddingGallery[30],
+      images.weddingGallery[31],
+      images.weddingGallery[32],
+      images.weddingGallery[33]
     ],
   },
   {
@@ -44,12 +71,32 @@ const collections: Collection[] = [
     hero: images.aboutPortrait,
     feature: images.eventsModel,
     gallery: [
-      images.servicesGreen,
-      images.aboutHero,
-      images.portfolioGallery[0],
-      images.portfolioGallery[6],
-      images.portfolioGallery[9],
-      images.portfolioGallery[12],
+      images.portraitsGallery[0],
+      images.portraitsGallery[1],
+      images.portraitsGallery[2],
+      images.portraitsGallery[3],
+      images.portraitsGallery[4],
+      images.portraitsGallery[5],
+      images.portraitsGallery[6],
+      images.portraitsGallery[7],
+      images.portraitsGallery[8],
+      images.portraitsGallery[9],
+      images.portraitsGallery[10],
+      images.portraitsGallery[11],
+      images.portraitsGallery[12],
+      images.portraitsGallery[13],
+      images.portraitsGallery[14],
+      images.portraitsGallery[15],
+      images.portraitsGallery[16],
+      images.portraitsGallery[17],
+      images.portraitsGallery[18],
+      images.portraitsGallery[19],
+      images.portraitsGallery[20],
+      images.portraitsGallery[21],
+      images.portraitsGallery[22],
+      images.portraitsGallery[23],
+      images.portraitsGallery[24],
+      images.portraitsGallery[25]
     ],
   },
   {
@@ -61,12 +108,51 @@ const collections: Collection[] = [
     hero: images.servicesBg,
     feature: images.gallery1,
     gallery: [
-      images.portfolioBanner2,
-      images.portfolioGallery[2],
-      images.portfolioGallery[3],
-      images.portfolioGallery[4],
-      images.portfolioGallery[7],
-      images.portfolioGallery[8],
+      images.eventsGallery[0],
+      images.eventsGallery[1],
+      images.eventsGallery[2],
+      images.eventsGallery[3],
+      images.eventsGallery[4],
+      images.eventsGallery[5],
+      images.eventsGallery[6],
+      images.eventsGallery[7],
+      images.eventsGallery[8],
+      images.eventsGallery[9],
+      images.eventsGallery[10],
+      images.eventsGallery[11],
+      images.eventsGallery[12],
+      images.eventsGallery[13],
+      images.eventsGallery[14],
+      images.eventsGallery[15],
+      images.eventsGallery[16],
+      images.eventsGallery[17],
+    ],
+  },
+  {
+    id: "babyshoots",
+    label: "Baby Shoots",
+    title: "Baby shoots captured with warmth, tenderness, and a focus on natural moments.",
+    description:
+      "These sessions celebrate the joy and innocence of newborns, focusing on gentle interactions and candid expressions.",
+    hero: images.newbornFooter,
+    feature: images.galleryHands,
+    // feature: images.gallery1,
+    gallery: [
+      images.babyShotGallery[0],
+      images.babyShotGallery[1],
+      images.babyShotGallery[2],
+      images.babyShotGallery[3],
+      images.babyShotGallery[4],
+      images.babyShotGallery[5],
+      images.babyShotGallery[6],
+      images.babyShotGallery[7],
+      images.babyShotGallery[8],
+      images.babyShotGallery[9],
+      images.babyShotGallery[10],
+      images.babyShotGallery[11],
+      images.babyShotGallery[12],
+      images.babyShotGallery[13],
+      images.babyShotGallery[14]
     ],
   },
 ];
@@ -87,7 +173,7 @@ export function PortfolioPageSections() {
     <main className="bg-white text-[#1d1d1d]">
       <section className="relative isolate overflow-hidden bg-[#17120e]">
         <Image
-          src={activeCollection.hero}
+          src={images.weddingGallery[0]}
           alt={activeCollection.label}
           fill
           priority
@@ -96,8 +182,8 @@ export function PortfolioPageSections() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,14,11,0.74)_0%,rgba(18,14,11,0.52)_42%,rgba(18,14,11,0.38)_100%)]" />
 
-        <div className="relative z-10 mx-auto grid min-h-[86svh] max-w-[1360px] items-end gap-12 px-4 pb-14 pt-30 md:px-8 md:pb-18 md:pt-34 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:px-12">
-          <FadeIn className="max-w-3xl text-white">
+        <div className="relative z-10 mx-auto min-h-[86svh] max-w-[1360px] items-end gap-12 px-4 pb-14 pt-30 md:px-8 md:pb-18 md:pt-34 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:px-12">
+          <FadeIn className="text-white">
             <SectionLabel>Portfolio</SectionLabel>
             <h1 className="mt-6 font-[family-name:var(--font-cormorant)] text-[clamp(3.3rem,8vw,6rem)] font-semibold leading-[0.94] text-white">
               A curated portfolio that feels more like a premium presentation than a gallery dump.
@@ -146,11 +232,11 @@ export function PortfolioPageSections() {
                 <div className="grid gap-4 md:grid-cols-[1.08fr_0.92fr]">
                   <div className="overflow-hidden rounded-[30px] bg-[#f6f2eb]">
                     <Image
-                      src={activeCollection.hero}
+                      src={images.weddingGallery[15]}
                       alt={activeCollection.label}
                       width={1600}
-                      height={1100}
-                      className="h-[420px] w-full object-cover md:h-[560px]"
+                      height={100}
+                      className="h-[420px] w-full h-full object-cover md:h-[560px] weddingImage"
                     />
                   </div>
                   <div className="grid gap-4">

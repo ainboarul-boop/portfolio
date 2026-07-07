@@ -203,19 +203,20 @@ function FaqItem({
 export function AboutPageSections() {
   const [openFaq, setOpenFaq] = useState(0);
   const behindTheScenes = [
-    images.aboutHero,
-    images.aboutPortrait,
-    images.portfolioGallery[2],
-    images.portfolioGallery[4],
-    images.portfolioGallery[7],
-    images.portfolioGallery[10],
+    images.aboutGallery[0],
+    images.aboutGallery[2],
+    images.aboutGallery[4],
+    images.aboutGallery[6],
+    images.aboutGallery[7],
+    images.aboutGallery[8],
+    images.aboutGallery[9],
   ];
 
   return (
     <main className="bg-white text-[#1c1c1c]">
       <section className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#15110d]">
         <Image
-          src={images.aboutHero}
+          src={images.aboutGallery[10]}
           alt="Portrait of photographer Arul Kumar"
           fill
           priority
@@ -247,7 +248,7 @@ export function AboutPageSections() {
           <FadeIn>
             <div className="overflow-hidden rounded-[28px] bg-[#f6f2eb]">
               <Image
-                src={images.aboutPortrait}
+                src={images.aboutGallery[11]}
                 alt="Photographer portrait"
                 width={1418}
                 height={945}
@@ -302,7 +303,7 @@ export function AboutPageSections() {
       <section className="relative isolate overflow-hidden px-4 py-18 md:px-8 md:py-24 lg:px-12">
         <div className="absolute inset-0">
           <Image
-            src={images.portfolioGalleryHero}
+            src={images.aboutGallery[3]}
             alt=""
             fill
             sizes="100vw"
@@ -418,7 +419,7 @@ export function AboutPageSections() {
           <FadeIn>
             <div className="overflow-hidden rounded-[24px] bg-[#f3efe8]">
               <Image
-                src={images.portfolioGallery[12]}
+                src={images.aboutGallery[1]}
                 alt="Happy client portrait"
                 width={900}
                 height={1100}
@@ -467,7 +468,7 @@ export function AboutPageSections() {
       <section className="relative isolate overflow-hidden px-4 py-18 md:px-8 md:py-24 lg:px-12">
         <div className="absolute inset-0">
           <Image
-            src={images.heroBg}
+            src={images.aboutGallery[5]}
             alt=""
             fill
             sizes="100vw"

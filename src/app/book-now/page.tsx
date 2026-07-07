@@ -34,8 +34,8 @@ export default function BookNowPage() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(246,241,232,0.9)_0%,rgba(246,241,232,0.72)_46%,rgba(246,241,232,0.22)_100%)]" />
-          <div className="relative z-10 mx-auto grid min-h-[100svh] max-w-[1600px] items-center gap-12 px-4 py-24 pt-30 md:px-8 md:py-28 md:pt-34 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:px-16">
-            <div className="max-w-3xl">
+          <div className="relative z-10 mx-auto min-h-[100svh] max-w-[1600px] items-center gap-12 px-4 py-24 pt-30 md:px-8 md:py-28 md:pt-34 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:px-16">
+            <div className="max-w-full">
               <FadeIn>
                 <span className="inline-flex w-fit rounded-full border border-[#11131a]/10 bg-white/70 px-4 py-2 font-[family-name:var(--font-manrope)] text-[11px] font-semibold uppercase tracking-[0.32em] text-[#655d50] backdrop-blur-sm">
                   Book a session
@@ -50,7 +50,7 @@ export default function BookNowPage() {
                 </p>
               </FadeIn>
 
-              <FadeIn delay={0.1} className="mt-8 grid gap-4">
+              <FadeIn delay={0.1} className="mt-8 grid gap-4 max-w-3xl">
                 {quickNotes.map((item) => (
                   <div
                     key={item}
@@ -63,49 +63,6 @@ export default function BookNowPage() {
                 ))}
               </FadeIn>
             </div>
-
-            <FadeIn direction="left" className="relative">
-              <div className="grid gap-5 md:grid-cols-[1.02fr_0.98fr]">
-                <div className="rounded-[32px] border border-[#11131a]/10 bg-white/72 p-3 shadow-[0_24px_70px_rgba(0,0,0,0.12)] backdrop-blur-sm">
-                  <Image
-                    src={images.bookFabricated}
-                    alt="Bridal portrait photography by Arul Kumar"
-                    width={2118}
-                    height={2299}
-                    className="h-auto w-full rounded-[24px] object-cover"
-                    priority
-                  />
-                </div>
-                <div className="flex flex-col gap-5">
-                  <div className="rounded-[28px] border border-[#11131a]/10 bg-white/72 p-3 shadow-[0_24px_70px_rgba(0,0,0,0.12)] backdrop-blur-sm">
-                    <Image
-                      src={images.bookNewborn}
-                      alt="Newborn baby photography session"
-                      width={1673}
-                      height={1115}
-                      className="h-auto w-full rounded-[20px] object-cover"
-                    />
-                  </div>
-                  <div className="rounded-[26px] border border-[#11131a]/10 bg-[#11131a] px-6 py-5 text-white shadow-[0_18px_50px_rgba(0,0,0,0.16)]">
-                    <p className="font-[family-name:var(--font-manrope)] text-[11px] font-semibold uppercase tracking-[0.32em] text-[#d7b56d]">
-                      Direct contact
-                    </p>
-                    <a
-                      href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-                      className="mt-3 block font-[family-name:var(--font-antonio)] text-3xl uppercase tracking-[0.05em] transition-colors hover:text-[#d7b56d]"
-                    >
-                      {siteConfig.phone}
-                    </a>
-                    <a
-                      href={`mailto:${siteConfig.email}`}
-                      className="mt-3 block font-[family-name:var(--font-manrope)] text-sm text-white/76 transition-colors hover:text-white"
-                    >
-                      {siteConfig.email}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
           </div>
         </section>
 

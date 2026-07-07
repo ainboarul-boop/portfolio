@@ -63,3 +63,7 @@ select:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: #90724a;
 }
+
+.weddingImage {
+  height: 100%;
+}

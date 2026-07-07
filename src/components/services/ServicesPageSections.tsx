@@ -30,8 +30,8 @@ const serviceItems: ServiceItem[] = [
       "Venue atmosphere and decor details",
       "Candid crowd moments with clean coverage",
     ],
-    hero: images.servicesBg,
-    gallery: [images.portfolioGallery[3], images.portfolioGallery[8], images.gallery1],
+    hero: images.eventsGallery[10],
+    gallery: [images.eventsGallery[18], images.eventsGallery[11], images.eventsGallery[20]],
   },
   {
     id: "wedding",
@@ -44,8 +44,8 @@ const serviceItems: ServiceItem[] = [
       "Family storytelling with emotional candids",
       "A polished gallery ready for albums and sharing",
     ],
-    hero: images.servicesGold,
-    gallery: [images.heroBg, images.introBride, images.galleryHands],
+    hero: images.weddingGallery[34],
+    gallery: [images.weddingGallery[9], images.weddingGallery[2], images.weddingGallery[8]],
   },
   {
     id: "newborn",
@@ -59,7 +59,7 @@ const serviceItems: ServiceItem[] = [
       "Clean retouching with delicate tones",
     ],
     hero: images.bookNewborn,
-    gallery: [images.newbornFooter, images.portfolioBanner1, images.portfolioGallery[12]],
+    gallery: [images.babyShotGallery[10], images.babyShotGallery[8], images.babyShotGallery[7]],
   },
   {
     id: "portrait",
@@ -72,8 +72,8 @@ const serviceItems: ServiceItem[] = [
       "Individual, bridal, and editorial portraits",
       "Consistent color with timeless finishing",
     ],
-    hero: images.servicesGreen,
-    gallery: [images.aboutPortrait, images.eventsModel, images.portfolioGallery[9]],
+    hero: images.portraitsGallery[15],
+    gallery: [images.portraitsGallery[20], images.portraitsGallery[12], images.portraitsGallery[23]],
   },
   {
     id: "fashion",
@@ -87,22 +87,22 @@ const serviceItems: ServiceItem[] = [
       "Images suited for campaigns and socials",
     ],
     hero: images.eventsModel,
-    gallery: [images.servicesGreen, images.portfolioGallery[0], images.portfolioGallery[6]],
+    gallery: [images.portfolioGallery[0], images.servicesGreen, images.portraitsGallery[3]],
   },
-  {
-    id: "product",
-    title: "Product Photography",
-    short: "Clear, attractive product imagery for businesses, catalogues, promotions, and digital campaigns.",
-    description:
-      "Product work focuses on shape, texture, clarity, and a polished presentation. The aim is to create frames that feel elevated and ready for professional brand use.",
-    deliverables: [
-      "Product-focused composition and lighting",
-      "Brand-friendly editing and clean backgrounds",
-      "Visual consistency across product sets",
-    ],
-    hero: images.portfolioFeature,
-    gallery: [images.fabricatedBg, images.portfolioGalleryHero, images.galleryHands],
-  },
+  // {
+  //   id: "product",
+  //   title: "Product Photography",
+  //   short: "Clear, attractive product imagery for businesses, catalogues, promotions, and digital campaigns.",
+  //   description:
+  //     "Product work focuses on shape, texture, clarity, and a polished presentation. The aim is to create frames that feel elevated and ready for professional brand use.",
+  //   deliverables: [
+  //     "Product-focused composition and lighting",
+  //     "Brand-friendly editing and clean backgrounds",
+  //     "Visual consistency across product sets",
+  //   ],
+  //   hero: images.portfolioFeature,
+  //   gallery: [images.fabricatedBg, images.portfolioGalleryHero, images.galleryHands],
+  // },
 ];
 
 function SectionLabel({ children }: { children: ReactNode }) {
@@ -130,7 +130,7 @@ export function ServicesPageSections() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,14,11,0.78)_0%,rgba(18,14,11,0.56)_40%,rgba(18,14,11,0.4)_100%)]" />
 
-        <div className="relative z-10 mx-auto grid min-h-[86svh] max-w-[1360px] items-end gap-12 px-4 pb-14 pt-30 md:px-8 md:pb-18 md:pt-34 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:px-12">
+        <div className="relative z-10 mx-auto min-h-[86svh] max-w-[1360px] items-end gap-12 px-4 pb-14 pt-30 md:px-8 md:pb-18 md:pt-34 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:px-12">
           <FadeIn className="max-w-3xl text-white">
             <SectionLabel>Services</SectionLabel>
             <h1 className="mt-6 font-[family-name:var(--font-cormorant)] text-[clamp(3.3rem,8vw,6rem)] font-semibold leading-[0.94] text-white">
@@ -167,7 +167,7 @@ export function ServicesPageSections() {
                       key={item.id}
                       type="button"
                       onClick={() => setActiveId(item.id)}
-                      className={`w-full rounded-[22px] border px-5 py-5 text-left transition-all duration-300 ${
+                      className={`w-full rounded-[22px] border px-5 py-5 text-left transition-all duration-300 cursor-pointer ${
                         isActive
                           ? "border-[#d9ccb8] bg-white shadow-[0_14px_30px_rgba(30,24,18,0.06)]"
                           : "border-transparent bg-transparent hover:border-[#e7dfd3] hover:bg-white/70"

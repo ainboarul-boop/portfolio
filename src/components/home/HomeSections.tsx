@@ -20,7 +20,7 @@ export function HomeHero() {
       <div className="mx-auto max-w-[1480px] overflow-hidden rounded-[28px] bg-[#15110d]">
         <div className="relative min-h-[72svh] md:min-h-[78svh]">
           <Image
-            src={images.heroBg}
+            src={images.herohome}
             alt="Wedding couple portrait by Arul Kumar"
             fill
             priority
